@@ -20,9 +20,9 @@
 -->
 
 <project
-  xmlns="http://maven.apache.org/POM/4.1.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_1_0.xsd">
+    xmlns="http://maven.apache.org/POM/4.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_1_0.xsd">
 
   <modelVersion>4.1.0</modelVersion>
 
@@ -40,12 +40,12 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-          <groupId>de.mdhb.beispiele.maven4</groupId>
-          <artifactId>mod-1</artifactId>
+        <groupId>maven.four.bug.7920</groupId>
+        <artifactId>mod-1</artifactId>
       </dependency>
       <dependency>
-          <groupId>de.mdhb.beispiele.maven4</groupId>
-          <artifactId>mod-2</artifactId>
+        <groupId>maven.four.bug.7920</groupId>
+        <artifactId>mod-2</artifactId>
       </dependency>
     </dependencies>
   </dependencyManagement>
