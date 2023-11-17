@@ -34,6 +34,61 @@
   <artifactId>mod-1</artifactId>
   <name>Maven Bug :: 7920 :: Mod 1</name>
 
+  <organization>
+    <name>SoftwareEntwicklung Beratung Schulung</name>
+    <url>https://www.soebes.io</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>khmarbaise</id>
+      <name>Karl Heinz Marbaise</name>
+      <email>khmarbaise@apache.org</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>default</system>
+    <url>https://github.com/the-project/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <system>github</system>
+    <url>https://github.com/the-project/actions</url>
+  </ciManagement>
+
+  <scm>
+    <connection>scm:git:https://github.com/the-project/the-repo.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/the-project/the-repo.git</developerConnection>
+    <url>https://github.com/the-project/the-repo.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>ossrh-staging</id>
+      <url>???????????????????????</url>
+    </repository>
+    <snapshotRepository>
+      <id>ossrh-snapshots</id>
+      <url>???????????????????????</url>
+    </snapshotRepository>
+    <site>
+      <id>github</id>
+      <url>scm:git:ssh://git@github.com/the-project/the-repo.git</url>
+    </site>
+  </distributionManagement>
+
+  <licenses>
+    <license>
+      <name>???</name>
+      <url>????</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
