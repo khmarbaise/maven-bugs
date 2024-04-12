@@ -1,0 +1,55 @@
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.soebes.smpp</groupId>
+    <artifactId>smpp</artifactId>
+    <version>6.0.5</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>maven</groupId>
+  <artifactId>basic</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Basic Example</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.soebes.maven.plugins</groupId>
+        <artifactId>echo-maven-plugin</artifactId>
+        <version>0.5.0</version>
+        <executions>
+          <execution>
+            <phase>initialize</phase>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <configuration>
+              <echos>
+                <echo>=========================================================</echo>
+                <echo>project.rootDirectory: '${project.rootDirectory}'</echo>
+                <echo>session.rootDirectory: '${session.rootDirectory}'</echo>
+                <echo>session.topDirectory: '${session.topDirectory}'</echo>
+                <echo>project.basedir: '${project.basedir}'</echo>
+                <echo>project.build.directory: '${project.build.directory}'</echo>
+                <echo>=========================================================</echo>
+              </echos>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <modules>
+    <module>sub-mod-1</module>
+    <module>sub-mod-2</module>
+  </modules>
+
+</project>
