@@ -1,0 +1,155 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.soebes.smpp</groupId>
+    <artifactId>smpp</artifactId>
+    <version>7.0.0</version>
+    <relativePath/>
+  </parent>
+  <groupId>com.soebes.maven.bugs</groupId>
+  <artifactId>mng-8244</artifactId>
+  <version>2.0.0</version>
+  <properties>
+    <maven.compiler.release>23</maven.compiler.release>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.soebes.maven.plugins</groupId>
+          <artifactId>echo-maven-plugin</artifactId>
+          <version>0.5.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>integration-test</id>
+            <goals>
+              <goal>integration-test</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>after:integration-test</id>
+            <phase>after:integration-test</phase>
+            <goals>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.soebes.maven.plugins</groupId>
+        <artifactId>echo-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>before-clean</id>
+            <phase>before:clean</phase>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <configuration>
+              <echos>
+                <echo>Hallo 'before:clean' phase.</echo>
+              </echos>
+            </configuration>
+          </execution>
+          <execution>
+            <id>after-clean</id>
+            <phase>after:clean</phase>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <configuration>
+              <echos>
+                <echo>Hallo 'after:clean' phase.</echo>
+              </echos>
+            </configuration>
+          </execution>
+          <execution>
+            <id>before-build</id>
+            <phase>before:build</phase>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <configuration>
+              <echos>
+                <echo>Hallo 'before:build' phase.</echo>
+              </echos>
+            </configuration>
+          </execution>
+          <execution>
+            <id>build</id>
+            <phase>build</phase>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <configuration>
+              <echos>
+                <echo>Hallo 'build' phase.</echo>
+              </echos>
+            </configuration>
+          </execution>
+          <execution>
+            <id>after-build</id>
+            <phase>after:build</phase>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <configuration>
+              <echos>
+                <echo>Hallo 'after:build' phase.</echo>
+              </echos>
+            </configuration>
+          </execution>
+          <execution>
+            <id>before-all</id>
+            <phase>before:all</phase>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <configuration>
+              <echos>
+                <echo>Hallo 'before:all' phase.</echo>
+              </echos>
+            </configuration>
+          </execution>
+          <execution>
+            <id>all</id>
+            <phase>all</phase>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <configuration>
+              <echos>
+                <echo>Hallo 'all' phase.</echo>
+              </echos>
+            </configuration>
+          </execution>
+          <execution>
+            <id>after-all</id>
+            <phase>after:all</phase>
+            <goals>
+              <goal>echo</goal>
+            </goals>
+            <configuration>
+              <echos>
+                <echo>Hallo 'after:all' phase.</echo>
+              </echos>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+
+  </build>
+
+</project>
+
